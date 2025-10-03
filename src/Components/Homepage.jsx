@@ -3,59 +3,70 @@ import gambar from '../../public/smk binusa.jpg'
 
 export const Homepage = () => {
   return (
-    <div className="f">
-    <div className="bg-sky-400 h-20 shadow-md z-50">
-      <ul className="flex items-center justify-between"> 
-        <h1 className="text-white font-bold mt-2">
-          Home
-      </h1>
-        <li className="mt-2">
-          <a href="#" className="text-white font-medium">Jurusan</a>
-        </li>
-        <li className="ml-25 mt-2">
-          <a href="#" className="text-white font-medium">Tentang kami</a>
-        </li>
-        <li className="mx-30 mt-3">
-          <a href="#" className="font-medium text-white">sosial media</a>
-        </li>
-      </ul>
-      <div className="text-center my-15">
+    <div className="min-h-screen flex flex-col transition-all">
+      <div className="bg-sky-400 h-20 shadow-md sticky top-0 z-50">
+        <ul className="flex items-center justify-between"> 
+          <h1 className="text-white font-bold mt-2">PPDB</h1>
+          <li className="mt-2">
+            <a href="#Beranda" className="text-white font-medium no-underline">Home</a>
+          </li>
+          <li className="ml-25 mt-2">
+            <a href="#Jurusan" className="text-white font-medium no-underline">Jurusan</a>
+          </li>
+          <li className="mx-30 mt-3">
+            <a href="#about" className="font-medium text-white no-underline">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+      <div id='Beranda' className="text-center my-15">
         <h1 className="">Selamat datang di PPDB SMK BINUSA</h1>
-        <div className="w-50 mt-20 mx-20 grid-cols-10">
-          <img src={"smk binusa.jpg"} alt="ppdb" className="rounded-md object-cover"/> <br /> <br /> <br />
-          <div className="mt-10 h-30 grid grid-cols-5 gap-89">
-            <h1 className="mx-140 text-3xl font-bold text-shadow-lg">Jurusan</h1>
-            <div className="box bg-white shadow-lg my-30 rounded h-70 w-70 -mx-110 py-3">
-              <h2 className="text-2xl underline">TKJ</h2> <br />
-              <p className="font-semibold">TKJ merupakan singkatan dari teknik komputer jaringan, yang dimana di jurusan ini kalian akan mempelajari tentang komponen-komponen komputer,jaringan,atau bahkan coding</p>
-            </div>
-            <div className="box bg-white shadow-lg my-30 rounded h-70 w-70 -mx-110 py-3">
-              <h2 className="text-2xl underline">DPB</h2> <br />
-              <p className="font-semibold text-center">Desain Produksi Busana (DPB) adalah jurusan yang mempelajari cara merancang, membuat, dan memproduksi pakaian. Siswa diajarkan desain busana, membuat pola, menjahit, dan memahami tren fashion untuk siap bekerja atau berwirausaha di bidang mode.</p>
-            </div>
-            <div className="box bg-white shadow-lg my-30 rounded h-70 w-70 -mx-110 py-3">
-              <h2 className="text-2xl underline">AKL</h2> <br />
-              <p className="font-semibold">Akuntansi dan Keuangan Lembaga (AKL) adalah jurusan yang mempelajari pencatatan keuangan, pengelolaan anggaran, dan laporan keuangan. Siswa dilatih menjadi tenaga akuntansi yang siap bekerja di kantor, bank, atau membuka usaha sendiri.</p>
-            </div>
-            <div className="box bg-white shadow-lg my-30 rounded h-70 w-70 -mx-110 py-3">
-              <h2 className="text-2xl underline">TSM</h2> <br />
-              <p className="font-semibold">Teknik dan Bisnis Sepeda Motor (TSM) adalah jurusan yang mempelajari perawatan, perbaikan, dan bisnis sepeda motor. Siswa diajarkan keterampilan teknis dan kewirausahaan agar siap bekerja di bengkel atau membuka usaha sendiri.</p>
-            </div>
-            <div className="about -my-80 mx-125">
-              <h1 className="text-nowrap text-shadow-lg">Tentang Kami</h1>
-            </div>
-            <div className="-my-60 text-center ml-10 -mx-120">
-              <p className="font-serif">SMK Bina Nusantara Semarang adalah sekolah menengah kejuruan swasta yang didirikan pada tahun 2010. Sekolah ini berlokasi di Jl. Kemantren I No.5 Rt.02 Rw.4, Kota Semarang, dan memiliki akreditasi B dari Badan Akreditasi Nasional Sekolah/Madrasah (BAN-S/M). SMK Bina Nusantara menawarkan program pendidikan yang sesuai dengan kurikulum 2013 REV. Teknik Komputer dan Jaringan. Sekolah ini memiliki 379 siswa, di mana jumlah siswa laki-laki lebih banyak dari perempuan. SMK Bina Nusantara berkomitmen untuk meningkatkan ketrampilan wirausaha dan menyiapkan lulusan yang siap mengisi pasar kerja sesuai dengan bidang profesinya</p> <br /> <br /> <br /> <br /> <br />
-              <h1 className="text-shadow-lg">Sosial media</h1>
-              <div className="fixed bottom-0 left-0 w-full h-14 bg-blue-500 rounded-md">
+<div className="w-full mt-20 mx-auto rounded-lg p-10 bg-blue-200 flex gap-3 items-start">
+  <img src={"smk binusa.jpg"} alt="ppdb" className="w-1/2 rounded-md" />
 
-              </div>
+  <div className="w-1/2 text-left">
+    <h1 className="font-bold text-2xl leading-relaxed text-blue">
+      Syarat Pendaftaran:
+    </h1> <br />
+    <p className="font-semibold text-2xl text-white">1.Mengisi formulir pendaftaran</p>
+    <p className="font-semibold text-2xl text-white">2.Fotocopy akte kelahiran 2 lembar</p>
+    <p className="font-semibold text-2xl text-white">3.Membawa KK (kartu keluarga) </p>
+    <p className="font-semibold text-2xl text-white">4.Agama wajib Islam </p> <br /> <br />
+    <div className="mx-100 py-10">
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-5 rounded focus:outline-none focus:shadow-outline my-2 items-center">
+        <a href="/Login" className="text-white focus:outline-none no-underline text-nowrap text-2xl" >Daftar Sekarang</a>
+      </button>
+    </div>
+  </div>
+</div>
+          <div id='Jurusan' className="mt-10 h-30 grid grid-cols-5 gap-94">
+            <h1 className="mx-165 text-3xl font-bold text-shadow-lg">Jurusan</h1>
+            <div className="box bg-white shadow-lg my-30 rounded-lg h-70 w-70 -mx-90 py-3">
+              <h2 className="text-2xl underline">TKJ</h2> <br />
+              <p className="font-semibold">TKJ merupakan singkatan dari teknik komputer jaringan yang dimana di jurusan ini kalian akan mempelajari tentang seputar komputer</p>
+            </div>
+
+            <div className="box bg-white shadow-lg my-30 rounded-lg h-70 w-70 -mx-100 py-3">
+              <h2 className="text-2xl underline">DPB</h2> <br />
+              <p className="font-semibold text-center">Desain Produksi Busana (DPB) adalah jurusan yang akan mempelajari tentang tata cara menjahit pakaian,membuat pakaian,dll</p>
+            </div>
+
+            <div className="box bg-white shadow-lg my-30 rounded-lg h-70 w-70 -mx-110 py-3">
+              <h2 className="text-2xl underline">AKL</h2> <br />
+              <p className="font-semibold">Akuntansi dan Keuangan Lembaga (AKL) adalah jurusan yang akan mempelajari tentang hitung hitungan serta mengatur transaksi</p>
+            </div>
+
+            <div className="box bg-white shadow-lg my-30 rounded-lg h-70 w-70 -mx-115 py-3">
+              <h2 className="text-2xl underline">TSM</h2> <br />
+              <p className="font-semibold">Teknik dan Bisnis Sepeda Motor (TSM) adalah jurusan yang akan mempelajari tentang sepeda motor</p>
+            </div>
+
+            <div id='about' className="about py-auto mx-150 -mt-100">
+              <h1 className="text-nowrap text-shadow-lg">Tentang Kami</h1>
+             <p className="font-semibold text-center -ml-27 -mx-88 text-2xl">SMK Bina Nusantara Semarang adalah sekolah menengah kejuruan swasta yang didirikan pada tahun 2010. Sekolah ini terletak di Jl. Kemantren I No.5, Wonosari, Kec. Ngaliyan, Kota Semarang, Jawa Tengah. SMK Bina Nusantara memiliki akreditasi B dan fokus pada pengembangan keterampilan praktis untuk mempersiapkan lulusan agar siap mengisi pasar kerja. Sekolah ini menyediakan berbagai jurusan, termasuk Teknik Komputer dan Jaringan, Teknik Bisnis Sepeda Motor, dan Tata Busana, serta memiliki 27 guru yang profesional.</p>
+            </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    </div>
   )
 }
 
