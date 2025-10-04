@@ -4,7 +4,7 @@ import axios from "axios";
 import Swal from 'sweetalert2';
 
 
-function Login() {
+function Register() {
     const [formData, setFormData] = useState({
         Email: '',
         Nama: '',
@@ -50,11 +50,6 @@ function Login() {
         text: "Email atau password salah!",
       });
     }
-            setFormData({
-            Email: "",
-            Nama: "",
-            Password: "",
-          })
   } catch (error) {
     Swal.fire({
       icon: "error",
@@ -65,8 +60,6 @@ function Login() {
 
   setLoading(false);
 };
-
-
 
 
   return (
@@ -123,11 +116,11 @@ function Login() {
                 <button className="bg-sky-600 hover:bg-sky-800 rounded focus:outline-none py-2 px-3 text-white font-bold"
                  type="submit"
                  >
-                    Login
+                    Daftar
                 </button>
             <div>
-                <button className="bg-cyan-500 hover:bg-cyan-800 rounded focus:outline-none py-2 px-3">
-                <a href="/register" className="no-underline text-white font-bold text-center">Register </a>
+                <button className="bg-gray-500 hover:bg-gray-800 rounded focus:outline-none py-2 px-3">
+                <a href="/login" className="no-underline text-white font-bold text-center">Kembali </a>
                 </button>
             </div>
             </div>
@@ -137,4 +130,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Register

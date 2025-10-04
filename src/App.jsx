@@ -5,6 +5,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';  // Import yang benar
 import Homepage from './Components/Homepage';
 import Login from './Components/Login';
+import Dashboard from './sukigaki/Dashboard';
+import Register from './Components/Register';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );

@@ -27,19 +27,20 @@ export const Homepage = () => {
     <h1 className="font-bold text-2xl leading-relaxed text-blue">
       Syarat Pendaftaran:
     </h1> <br />
-    <p className="font-semibold text-2xl text-white">1.Mengisi formulir pendaftaran</p>
-    <p className="font-semibold text-2xl text-white">2.Fotocopy akte kelahiran 2 lembar</p>
-    <p className="font-semibold text-2xl text-white">3.Membawa KK (kartu keluarga) </p>
-    <p className="font-semibold text-2xl text-white">4.Agama wajib Islam </p> <br /> <br />
-    <div className="mx-100 py-10">
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-5 rounded focus:outline-none focus:shadow-outline my-2 items-center">
-        <a href="/Login" className="text-white focus:outline-none no-underline text-nowrap text-2xl" >Daftar Sekarang</a>
-      </button>
-    </div>
+    <p className="font-semibold text-2xl text-black">1.Mengisi formulir pendaftaran</p>
+    <p className="font-semibold text-2xl text-black">2.Fotocopy akte kelahiran 2 lembar</p>
+    <p className="font-semibold text-2xl text-black">3.Membawa KK (kartu keluarga) </p>
+    <p className="font-semibold text-2xl text-black">4.Agama wajib Islam </p>
+    <p className="font-semibold text-2xl text-black">5.Umur minimal 15 tahun </p>
+<div className="flex justify-center py-10">
+  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-5 rounded focus:outline-none focus:shadow-outline my-2">
+    <a href="/Login" className="text-white focus:outline-none no-underline whitespace-nowrap text-2xl">Daftar Sekarang</a>
+  </button>
+</div>
   </div>
 </div>
           <div id='Jurusan' className="mt-10 h-30 grid grid-cols-5 gap-94">
-            <h1 className="mx-165 text-3xl font-bold text-shadow-lg">Jurusan</h1>
+            <h1 className="mx-160 text-3xl font-bold text-shadow-lg">Jurusan</h1>
             <div className="box bg-white shadow-lg my-30 rounded-lg h-70 w-70 -mx-90 py-3">
               <h2 className="text-2xl underline">TKJ</h2> <br />
               <p className="font-semibold">TKJ merupakan singkatan dari teknik komputer jaringan yang dimana di jurusan ini kalian akan mempelajari tentang seputar komputer</p>
@@ -60,7 +61,7 @@ export const Homepage = () => {
               <p className="font-semibold">Teknik dan Bisnis Sepeda Motor (TSM) adalah jurusan yang akan mempelajari tentang sepeda motor</p>
             </div>
 
-            <div id='about' className="about py-auto mx-150 -mt-100">
+            <div id='about' className="about py-auto mx-145 -mt-100">
               <h1 className="text-nowrap text-shadow-lg">Tentang Kami</h1>
              <p className="font-semibold text-center -ml-27 -mx-88 text-2xl">SMK Bina Nusantara Semarang adalah sekolah menengah kejuruan swasta yang didirikan pada tahun 2010. Sekolah ini terletak di Jl. Kemantren I No.5, Wonosari, Kec. Ngaliyan, Kota Semarang, Jawa Tengah. SMK Bina Nusantara memiliki akreditasi B dan fokus pada pengembangan keterampilan praktis untuk mempersiapkan lulusan agar siap mengisi pasar kerja. Sekolah ini menyediakan berbagai jurusan, termasuk Teknik Komputer dan Jaringan, Teknik Bisnis Sepeda Motor, dan Tata Busana, serta memiliki 27 guru yang profesional.</p>
             </div>
