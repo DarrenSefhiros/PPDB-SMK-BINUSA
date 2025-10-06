@@ -24,12 +24,10 @@ function Register() {
 
   try {
     const response = await axios.get('http://localhost:5000/login', {
-      params: { Email: formData.Email } // Kita bisa filter query
+      params: { Email: formData.Email }
     });
 
     const users = response.data;
-    
-    // Cari user yang cocok Email dan Password
     const user = users.find(
       u => u.Email === formData.Email && u.Password === formData.Password
     );
@@ -65,7 +63,7 @@ function Register() {
   return (
     <div className="flex items-center justify-center bg-sky-500 min-h-screen">
         <div className="bg-amber-50 p-8 rounded-lg shadow-md w-full max-w-sm">
-            <h1 className='text-center font-bold'>Login</h1>
+            <h1 className='text-center font-bold'>Masuk</h1>
         <form onSubmit={handleSubmit}>
             <div className="mb-4">
                 <label className="font-semibold mx-2" htmlFor="Email">

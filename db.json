@@ -1,5 +1,34 @@
 {
-    "login": [
-
-    ]
+  "login": [
+    {
+      "id": "f1cb",
+      "Email": "awdad",
+      "Nama": "awda",
+      "Password": "awdawd"
+    },
+    {
+      "id": "6bcc",
+      "Email": "awdad",
+      "Nama": "ww",
+      "Password": "awdawd"
+    },
+    {
+      "id": "8d33",
+      "Email": "awdad",
+      "Nama": "aw",
+      "Password": "awdawd"
+    },
+    {
+      "id": "9d7d",
+      "Email": "awdad",
+      "Nama": "awda",
+      "Password": "awdawd"
+    },
+    {
+      "id": "6840",
+      "Email": "awdad",
+      "Nama": "hitam",
+      "Password": "awdawd"
+    }
+  ]
 }

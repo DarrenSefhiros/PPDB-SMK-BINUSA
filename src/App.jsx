@@ -7,6 +7,7 @@ import Homepage from './Components/Homepage';
 import Login from './Components/Login';
 import Dashboard from './sukigaki/Dashboard';
 import Register from './Components/Register';
+import Editmenu from './sukigaki/Editmenu';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/edit/:id" element={<Editmenu />} />
       </Routes>
     </BrowserRouter>
   );
