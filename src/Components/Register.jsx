@@ -7,7 +7,6 @@ import Swal from 'sweetalert2';
 function Register() {
     const [formData, setFormData] = useState({
         Email: '',
-        Nama: '',
         Password: '',
     });
 
@@ -76,21 +75,6 @@ function Register() {
                     name="Email"
                     placeholder="masukan email anda"
                     value={formData.Email}
-                    onChange={handleChange}
-                    required
-                    />
-            </div>
-            <div className="mb-4">
-                <label className="font-semibold mx-2" htmlFor="Nama">
-                    Nama
-                    </label>
-                    <input 
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="Nama"
-                    type="text"
-                    name="Nama"
-                    placeholder="masukan Nama anda"
-                    value={formData.Nama}
                     onChange={handleChange}
                     required
                     />

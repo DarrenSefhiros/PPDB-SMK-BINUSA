@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Sidnav from "./sidnav";
 import Swal from "sweetalert2";
 
-function Dashboard() {
+function Jurusandata() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/login");
+        const res = await axios.get("http://localhost:5000/Jurusan");
         setData(res.data);
       } catch (err) {
         console.error("Gagal mengambil data:", err);
@@ -35,7 +35,7 @@ function Dashboard() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:5000/login/${id}`);
+          await axios.delete(`http://localhost:5000/Jurusan/${id}`);
           setData((prev) => prev.filter((item) => item.id !== id));
           Swal.fire("Deleted!", "Data anda telah dihapus", "success");
         } catch (err) {
@@ -55,7 +55,7 @@ function Dashboard() {
           <h2 className="text-lg font-semibold text-gray-700">
             Total Login: {data.length} orang
           </h2>
-          <Link to="/TambahData">
+          <Link to="/Jurusan1">
             <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
               + Tambah Data
             </button>
@@ -65,8 +65,9 @@ function Dashboard() {
           <table className="min-w-full border border-blue-500">
             <thead className="bg-sky-200">
               <tr>
-                <th className="border px-4 py-2 text-left">Email</th>
-                <th className="border px-4 py-2 text-left">Password</th>
+                <th className="border px-4 py-2 text-left">Sekolah</th>
+                <th className="border px-4 py-2 text-left">Hobi</th>
+                <th className="border px-4 py-2 text-left">Jurusan</th>
                 <th className="border px-4 py-2 text-center">Ubah</th>
               </tr>
             </thead>
@@ -80,10 +81,11 @@ function Dashboard() {
               ) : data.length > 0 ? (
                 data.map((item) => (
                   <tr key={item.id} className="bg-blue-100 hover:bg-blue-200">
-                    <td className="border px-4 py-2">{item.Email}</td>
-                    <td className="border px-4 py-2">{item.Password}</td>
+                    <td className="border px-4 py-2">{item.Sekolah}</td>
+                    <td className="border px-4 py-2">{item.Hobi}</td>
+                    <td className="border px-4 py-2">{item.Jurusan}</td>
                     <td className="border px-4 py-2 text-center space-x-2">
-                      <Link to={`/Edit/${item.id}`}>
+                      <Link to={`/EditMenu/${item.id}`}>
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">
                           Edit
                         </button>
@@ -112,4 +114,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Jurusandata;

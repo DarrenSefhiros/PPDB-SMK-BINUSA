@@ -1,34 +1,59 @@
 {
   "login": [
     {
-      "id": "f1cb",
+      "id": "4d4e",
+      "Email": "w",
+      "Password": "awdawd",
+      "harga": 0
+    },
+    {
+      "id": "6431",
+      "Email": "durian",
+      "Password": "aku suka roti"
+    },
+    {
+      "id": "15d0",
       "Email": "awdad",
-      "Nama": "awda",
       "Password": "awdawd"
     },
     {
-      "id": "6bcc",
-      "Email": "awdad",
-      "Nama": "ww",
-      "Password": "awdawd"
+      "id": "ee98",
+      "Email": "awda@gmail.com",
+      "Password": "awd"
     },
     {
-      "id": "8d33",
-      "Email": "awdad",
-      "Nama": "aw",
-      "Password": "awdawd"
+      "id": "919e",
+      "Email": "awda@gmail.com",
+      "Nama": "awdad",
+      "Password": "awd"
+    }
+  ],
+  "Identitas": [
+    {
+      "id": "7b03",
+      "Nama": "awdawdadwadwa",
+      "Umur": "2",
+      "Gender": "awda"
+    }
+  ],
+  "Jurusan": [
+    {
+      "id": "0499",
+      "Sekolah": "awda",
+      "Hobi": "awda",
+      "Jurusan": "awda"
     },
     {
-      "id": "9d7d",
-      "Email": "awdad",
-      "Nama": "awda",
-      "Password": "awdawd"
+      "id": "5c18",
+      "Sekolah": "awd",
+      "Hobi": "awd",
+      "Jurusan": "awd"
     },
     {
-      "id": "6840",
-      "Email": "awdad",
-      "Nama": "hitam",
-      "Password": "awdawd"
+      "id": "9095",
+      "Sekolah": "awd",
+      "Hobi": "awd",
+      "Jurusan": "awd"
     }
   ]
 }

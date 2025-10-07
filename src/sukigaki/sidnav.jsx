@@ -12,8 +12,23 @@ function Sidnav() {
                 </div>
                 <nav className="space-y-4">
                     <div className="my-10">
+                        <button className="bg-sky-400 hover:bg-sky-800 rounded-md px-15">
+                            <a href="/Profile" className="block mx-10 text-white no-underline font-semibold">Profil</a>
+                        </button>
+                    </div>
+                    <div className="my-10">
                         <button className="bg-sky-400 hover:bg-sky-800 rounded-md px-10">
                             <a href="/Dashboard" className="block mx-10 text-white no-underline font-semibold">Dashboard</a>
+                        </button>
+                    </div>
+                    <div className="my-10">
+                        <button className="bg-sky-400 hover:bg-sky-800 rounded-md px-12">
+                            <a href="/Identitasdata" className="block mx-10 text-white no-underline font-semibold">Identitas</a>
+                        </button>
+                    </div>
+                    <div className="my-10">
+                        <button className="bg-sky-400 hover:bg-sky-800 rounded-md px-13">
+                            <a href="/Jurusandata" className="block mx-10 text-white no-underline font-semibold">Jurusan</a>
                         </button>
                     </div>
                 </nav>
