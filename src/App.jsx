@@ -15,6 +15,9 @@ import Identitasdata from './sukigaki/Identitasdata';
 import Jurusandata from './sukigaki/Jurusandata';
 import Identitas1 from './sukigaki/Identitas1';
 import Jurusan1 from './sukigaki/Jurusan1';
+import Editidentitas from './sukigaki/Editidentitas';
+import Editjurusan from './sukigaki/Editjurusan';
+import Profile from './sukigaki/profile';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,7 +36,10 @@ function App() {
         <Route path="/Jurusan" element={<Jurusan />} />
         <Route path="/Jurusan1" element={<Jurusan1 />} />
         <Route path="/Jurusandata" element={<Jurusandata />} />
+        <Route path="/Profile" element={<Profile />} />
         <Route path="/edit/:id" element={<Editmenu />} />
+        <Route path="/editidentitas/:id" element={<Editidentitas />} />
+        <Route path="/Editjurusan/:id" element={<Editjurusan />} />
       </Routes>
     </BrowserRouter>
   );

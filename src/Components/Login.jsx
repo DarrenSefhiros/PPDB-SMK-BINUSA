@@ -31,6 +31,8 @@ function Login() {
   showConfirmButton: false,
   timer: 1500
            });
+           localStorage.setItem("loginData", JSON.stringify(formData));
+
 
           setFormData({
             Email: "",

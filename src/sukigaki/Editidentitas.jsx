@@ -4,13 +4,14 @@ import axios from "axios";
 import Swal from 'sweetalert2';
 
 
-function Editmenu() {
+function Editidentitas() {
   const { id } = useParams();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    Email: "",
-    Password: "",
+    Nama: "",
+    Umur: "",
+    Gender: "",
   });
 
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ function Editmenu() {
 useEffect(() => {
   const fetchData = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/login/${id}`);
+      const res = await axios.get(`http://localhost:5000/Identitas/${id}`);
       const data = Array.isArray(res.data) ? res.data[0] : res.data;
       setFormData(data);
       // alert("Berhasil mengambil data!"); 
@@ -55,13 +56,13 @@ useEffect(() => {
   console.log("Mengirim data:", dataToSend);
 
   try {
-    await axios.put(`http://localhost:5000/login/${id}`, dataToSend);
+    await axios.put(`http://localhost:5000/Identitas/${id}`, dataToSend);
     Swal.fire({
   title: "Data berhasil diubah",
   icon: "success",
   draggable: true
 });
-    navigate("/Dashboard");
+    navigate("/Identitasdata");
   } catch (err) {
     console.error("Gagal mengupdate data:", err.response?.data || err.message);
       Swal.fire({
@@ -78,35 +79,50 @@ useEffect(() => {
 
   return (
 <div className="flex items-center justify-center bg-sky-500 min-h-screen">
-  <div className="bg-amber-50 p-8 rounded-lg shadow-md w-96 relative h-90">
+  <div className="bg-amber-50 p-8 rounded-lg shadow-md w-96 relative h-110">
     <h1 className='text-center font-bold text-2xl mb-4'>Edit</h1>
     <form onSubmit={handleSubmit}>
       <div className="mb-4">
-        <label className="font-semibold mx-2" htmlFor="Email">
-          Email
+        <label className="font-semibold mx-2" htmlFor="Nama">
+          Nama
         </label>
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="Email"
+          id="Nama"
           type="text"
-          name="Email"
-          placeholder="Masukan email anda"
-          value={formData.Email || ""}
+          name="Nama"
+          placeholder="Masukan Nama anda"
+          value={formData.Nama || ""}
           onChange={handleChange}
           required
         />
       </div>
       <div className="mb-4">
-        <label className="font-semibold mx-2" htmlFor="Password">
-          Password
+        <label className="font-semibold mx-2" htmlFor="Umur">
+          Umur
         </label>
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="Password"
+          id="Umur"
+          type="number"
+          name="Umur"
+          placeholder="Masukan Umur anda"
+          value={formData.Umur || ""}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label className="font-semibold mx-2" htmlFor="Gender">
+          Gender
+        </label>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="Gender"
           type="text"
-          name="Password"
-          placeholder="Masukan Password anda"
-          value={formData.Password || ""}
+          name="Gender"
+          placeholder="Masukan Gender anda"
+          value={formData.Gender || ""}
           onChange={handleChange}
           required
         />
@@ -132,4 +148,4 @@ useEffect(() => {
   )
 }
 
-export default Editmenu
+export default Editidentitas

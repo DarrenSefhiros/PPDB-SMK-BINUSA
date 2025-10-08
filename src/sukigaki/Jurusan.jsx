@@ -18,43 +18,46 @@ function Jurusan() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        try {
-          const response = await axios.post("http://localhost:5000/Jurusan", formData);
+   const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-          console.log("Respon server:", response.data);
-          Swal.fire({
-  position: "center",
-  icon: "success",
-  title: "data anda telah di simpan",
-  showConfirmButton: false,
-  timer: 1500
-           });
+  try {
+    const jurusanData = formData;
+    const loginData = JSON.parse(localStorage.getItem("loginData"));
+    const identitasData = JSON.parse(localStorage.getItem("identitasData"));
 
-          setFormData({
-            Sekolah: "",
-            Hobi: "",
-            Jurusan: "",
-          })
-
-
-          navigate("/Dashboard");
-        } catch (error) {
-          console.error(err);
-          Swal.fire({
-  icon: "error",
-  title: "Oops...",
-  text: "Something went wrong!",
-  footer: '<a href="#">Why do I have this issue?</a>'
-});
-        } finally {
-          setLoading(false);
-        }
+    const fullProfile = {
+      ...loginData,
+      ...identitasData,
+      ...jurusanData,
     };
 
+    await axios.post("http://localhost:5000/Profile", fullProfile);
 
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Profil berhasil dibuat",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
+    localStorage.removeItem("loginData");
+    localStorage.removeItem("identitasData");
+    navigate("/Dashboard");
+
+  } catch (error) {
+    console.error("Gagal membuat profil:", error);
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Terjadi kesalahan saat menyimpan profil.",
+    });
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
 <div className="flex items-center justify-center bg-sky-500 min-h-screen">

@@ -36,6 +36,7 @@ function Identitas() {
       showConfirmButton: false,
       timer: 1500
     });
+    localStorage.setItem("identitasData", JSON.stringify(formData));
 
     setFormData({
       Nama: "",

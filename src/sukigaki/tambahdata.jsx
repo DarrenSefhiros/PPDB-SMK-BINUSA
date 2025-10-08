@@ -35,7 +35,6 @@ function Tambahdata() {
 
           setFormData({
             Email: "",
-            Nama: "",
             Password: "",
           })
 
@@ -58,7 +57,7 @@ function Tambahdata() {
 
   return (
 <div className="flex items-center justify-center bg-sky-500 min-h-screen">
-  <div className="bg-amber-50 p-8 rounded-lg shadow-md w-96 relative h-110">
+  <div className="bg-amber-50 p-8 rounded-lg shadow-md w-96 relative h-93">
     <h1 className='text-center font-bold text-2xl mb-4'>Login</h1>
     <form onSubmit={handleSubmit}>
       <div className="mb-4">
@@ -72,21 +71,6 @@ function Tambahdata() {
           name="Email"
           placeholder="Masukan email anda"
           value={formData.Email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="mb-4">
-        <label className="font-semibold mx-2" htmlFor="Nama">
-          Nama
-        </label>
-        <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="Nama"
-          type="text"
-          name="Nama"
-          placeholder="Masukan nama anda"
-          value={formData.Nama}
           onChange={handleChange}
           required
         />

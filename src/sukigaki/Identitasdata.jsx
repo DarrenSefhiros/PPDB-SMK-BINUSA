@@ -85,7 +85,7 @@ function Identitasdata() {
                     <td className="border px-4 py-2">{item.Umur}</td>
                     <td className="border px-4 py-2">{item.Gender}</td>
                     <td className="border px-4 py-2 text-center space-x-2">
-                      <Link to={`/EditMenu/${item.id}`}>
+                      <Link to={`/EditIdentitas/${item.id}`}>
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">
                           Edit
                         </button>

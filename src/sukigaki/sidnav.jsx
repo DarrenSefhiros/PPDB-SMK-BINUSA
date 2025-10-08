@@ -31,6 +31,9 @@ function Sidnav() {
                             <a href="/Jurusandata" className="block mx-10 text-white no-underline font-semibold">Jurusan</a>
                         </button>
                     </div>
+                    <div className="my-80">
+                        <a href="/login" className='text-center no-underline text-white text-2xl px-18 text-nowrap'>Logout </a>
+                    </div>
                 </nav>
     </div>
  </div>   

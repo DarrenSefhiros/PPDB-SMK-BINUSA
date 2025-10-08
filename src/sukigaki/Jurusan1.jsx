@@ -46,7 +46,7 @@ function Jurusan1() {
     navigate("/Dashboard");
 
   } catch (error) {
-    console.error(error); // ✅ FIXED
+    console.error(error);
     Swal.fire({
       icon: "error",
       title: "Oops...",
